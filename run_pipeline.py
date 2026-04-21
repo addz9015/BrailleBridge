@@ -1,7 +1,7 @@
 """
 Master Training Pipeline Orchestration
 
-This script coordinates all phases of the Person A workflow:
+This script coordinates all phases of the BrailleBridge pipeline:
 1. Dataset loading and validation
 2. Word list construction
 3. Synthetic corpus generation
@@ -68,7 +68,7 @@ def phase_2_wordlist_construction():
     
     wordlist, splits = build_wordlist(output_dir=DATA_DIR)
     
-    # Also save as splits.json for Person B
+    # Also save as splits.json for downstream integration
     splits_path = os.path.join(DATA_DIR, 'splits.json')
     with open(splits_path, 'w') as f:
         json.dump(splits, f, indent=2)
@@ -231,7 +231,7 @@ def phase_6_evaluation(splits):
 def main():
     """Run full pipeline."""
     logger.info("\n" + "█" * 70)
-    logger.info("█ PERSON A: BRAILLE RECOGNITION PIPELINE")
+    logger.info("█ BRAILLEBRIDGE: BRAILLE RECOGNITION PIPELINE")
     logger.info("█ Data Synthesis + Denoising Autoencoder")
     logger.info("█" * 70 + "\n")
     
@@ -257,7 +257,7 @@ def main():
         logger.info("\n" + "=" * 70)
         logger.info("✓ PIPELINE COMPLETE")
         logger.info("=" * 70)
-        logger.info("\nHandoff artifacts ready for Person B:")
+        logger.info("\nHandoff artifacts ready for downstream integration:")
         logger.info(f"  ✓ {os.path.join(DATA_DIR, 'corpus.h5')}")
         logger.info(f"  ✓ {os.path.join(CHECKPOINT_DIR, 'dae_best.pt')}")
         logger.info(f"  ✓ {os.path.join(DATA_DIR, 'norm_params.json')}")

@@ -1,8 +1,8 @@
 """
 Denoiser Export Interface
 
-EXPORTED INTERFACE for Person B.
-Person B calls denoise(noisy_signal) to get clean reconstructions.
+Exported interface for downstream decoding.
+Call denoise(noisy_signal) to get clean reconstructions.
 
 This module does NOT depend on training code.
 Only imports: torch, numpy, model weights.
@@ -110,7 +110,7 @@ def denoise(noisy_signal: np.ndarray,
     """
     Denoise a signal using the trained autoencoder.
     
-    *** MAIN EXPORT INTERFACE - Person B uses this function ***
+    *** MAIN EXPORT INTERFACE - downstream code uses this function ***
     
     Args:
         noisy_signal: Input signal, shape (T, 12), dtype float32

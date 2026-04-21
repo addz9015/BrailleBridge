@@ -2,7 +2,7 @@
 Shared Evaluation Script
 
 Computes WER (Word Error Rate) and CER (Character Error Rate).
-Used by both Person A (for baseline) and Person B (for main conditions).
+Used by the pipeline baseline and the main decoding conditions.
 
 Requires: jiwer library
 """

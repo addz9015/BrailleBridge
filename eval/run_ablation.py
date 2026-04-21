@@ -161,7 +161,7 @@ def run_ablation():
     results['cond4'] = compute_metrics(preds4, targets)
     print(f"  WER={results['cond4'][0]}%  CER={results['cond4'][1]}%")
 
-    # ── Condition ① — Letter baseline (fill in from Person A) ────────────────
+    # ── Condition ① — Letter baseline (fill in baseline metrics) ─────────────
     # Fill from env vars if available, else leave as TODO in table.
     BASELINE_WER = os.getenv('BASELINE_WER', 'TBD')
     BASELINE_CER = os.getenv('BASELINE_CER', 'TBD')
@@ -178,7 +178,7 @@ def run_ablation():
 
 **Notes:**
 - WER and CER are percentages (lower is better)
-- Condition ① numbers provided by Person A
+- Condition ① numbers provided by the baseline evaluation
 - LM weight for condition ④: {LM_WEIGHT} (set via LM_WEIGHT env var)
 - Test set: {len(test_samples)} samples
 """

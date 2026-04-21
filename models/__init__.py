@@ -1,5 +1,5 @@
 """
-Person A: Data Synthesis & Denoising Module
+BrailleBridge: Data Synthesis & Denoising Module
 ============================================
 
 This package contains all modules for:
@@ -11,5 +11,5 @@ This package contains all modules for:
 """
 
 __version__ = "1.0.0"
-__author__ = "Person A"
+__author__ = "Advika Nagool"
 __description__ = "Braille Recognition Pipeline - Data & Denoising Module"

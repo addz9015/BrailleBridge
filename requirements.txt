@@ -1,4 +1,4 @@
-# Person A: Braille Recognition Pipeline - Dependencies
+# BrailleBridge: Dependencies
 
 # Core Data Science
 numpy>=1.21.0

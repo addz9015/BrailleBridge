@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Person A: Final Verification Checklist
+Final Verification Checklist
 
-Verifies all deliverables are ready for handoff to Person B.
+Verifies all deliverables are ready for downstream integration.
 Run this after completing run_pipeline.py
 
 Usage:
@@ -46,7 +46,7 @@ def check_file_exists(path, description):
 def verify_artifacts():
     """Verify all handoff artifacts."""
     print("\n" + "=" * 70)
-    print("PERSON A: HANDOFF VERIFICATION CHECKLIST")
+    print("BRAILLEBRIDGE: HANDOFF VERIFICATION CHECKLIST")
     print("=" * 70 + "\n")
     
     all_ok = True
@@ -55,7 +55,7 @@ def verify_artifacts():
     print("Data Artifacts:")
     all_ok &= check_file_exists(os.path.join(DATA_DIR, 'wordlist.txt'), 'Word list')
     all_ok &= check_file_exists(os.path.join(DATA_DIR, 'wordlist_splits.json'), 'Word splits')
-    all_ok &= check_file_exists(os.path.join(DATA_DIR, 'splits.json'), 'Splits (Person B)')
+    all_ok &= check_file_exists(os.path.join(DATA_DIR, 'splits.json'), 'Splits')
     all_ok &= check_file_exists(os.path.join(DATA_DIR, 'corpus.h5'), 'Synthetic corpus')
     all_ok &= check_file_exists(os.path.join(DATA_DIR, 'norm_params.json'), 'Normalization params')
     
@@ -214,7 +214,7 @@ def create_final_report():
     
     print("\n" + "=" * 70)
     if all_checks_passed:
-        print("[OK] ALL CHECKS PASSED - READY FOR HANDOFF TO PERSON B [OK]")
+        print("[OK] ALL CHECKS PASSED - READY FOR HANDOFF [OK]")
     else:
         print("[XX] SOME CHECKS FAILED - PLEASE REVIEW ABOVE [XX]")
     print("=" * 70 + "\n")

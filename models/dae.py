@@ -324,7 +324,7 @@ def denoise(noisy_signal: np.ndarray,
     """
     Denoise a signal using the trained model.
     
-    EXPORTED INTERFACE - Person B uses this function.
+    EXPORTED INTERFACE - downstream code uses this function.
     
     Args:
         noisy_signal: Input signal (T, 12) float32
