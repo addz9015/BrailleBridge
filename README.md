@@ -188,4 +188,4 @@ Reduce batch size in training configurations/scripts.
 
 ## Project Ownership
 
-This project is made by **Advika Nagool**.
+This project is made by **Advika Nagool** and **Thejovati Narayanan**.
