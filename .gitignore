@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Model and runtime artifacts
+checkpoints/*.pt
+checkpoints/*.pth
+results/*.png
+results/*.jpg
+results/*.jpeg
+results/*.mp4
+results/*.wav
+
+# Data artifacts
+*.h5
+*.hdf5
+data/icub_braille_raw/
+data/downloads/
+data/*.npy
+data/*.npz
+
+# Logs
+*.log

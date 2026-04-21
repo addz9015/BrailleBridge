@@ -1,0 +1,4 @@
+# Noise configuration for boundary transitions
+blend_window_width: 8
+noise_scale: 0.15 # 15% of local signal std
+random_seed: 42
